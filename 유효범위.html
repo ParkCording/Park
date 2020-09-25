@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var vscope = 'global';
+		function fscope() {
+			var vscope = 'local';
+			var lv = 'local variables';
+			//alert (lv);
+			// 내부에 만들어진 지역변수는 내부에서만 불러올 수 있음
+		}
+		//function fscope2() {
+		//	var vscope = 'local';
+		//	alert (vscope);
+		//}
+		fscope();
+		//alert (lv);
+		//fscope2();
+		// 이렇게 하면 오류,
+		// 지역변수 (local), 전역변수 (global)
+		// -> fscope 안에 있는 vscope = 지역변수 , 바깥에 있는 vscope = 전역변수
+	</script>
+</body>
+</html>
