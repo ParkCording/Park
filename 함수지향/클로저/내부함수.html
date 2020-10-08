@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function outter(){
+			function inner(){
+				var title = 'coding everybody';
+				alert(title);
+			}
+			// 내부 함수
+			inner();
+		}
+		outter();
+		// 외부 함수
+
+		function outter(){
+			var title = 'coding everybody';
+			// 지역 변수
+			function inner(){
+				alert(title);
+			}
+			inner();
+		}
+		outter();
+		//내부함수 inner에서 title을 호출(4행)했을 때 외부함수인 outter의 지역변수에 접근할 수 있음을 보여준다.
+	</script>
+</body>
+</html>
